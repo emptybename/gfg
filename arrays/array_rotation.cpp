@@ -34,7 +34,7 @@ int Gcd(int a, int b){
 	if(b == 0)return a;
 	return Gcd(b, a%b);
 }
-
+// Jungling Algorithm
 void RotateArraySolution3(int array_to_rotate[], int n, int d){
 	int shift_val = Gcd(n,d);
 	for(int i = 0;i < shift_val;i++){
@@ -50,7 +50,23 @@ void RotateArraySolution3(int array_to_rotate[], int n, int d){
 		array_to_rotate[j] = temp;
 	}
 }
+// Reversal Algorithm
 
+void ReverseArray(int ar[], int start, int end){
+	while(start < end){
+		int temp = ar[start];
+		ar[start] = ar[end];
+		ar[end] = temp;
+		start++;
+		end--; 
+	}
+}
+
+void RotateArraySolution4(int array_to_rotate[], int n, int d){
+	ReverseArray(array_to_rotate, 0, d-1);
+	ReverseArray(array_to_rotate, d, n-1);
+	ReverseArray(array_to_rotate, 0, n-1);
+}
 int main(){
 	int n;
 	cin>>n;
@@ -60,7 +76,8 @@ int main(){
 	cin>>d;
 	//RotateArraySolution1(array_to_rotate,n,d);
 	//RotateArraySolution2(array_to_rotate,n,d);
-	RotateArraySolution3(array_to_rotate, n, d);
+	//RotateArraySolution3(array_to_rotate, n, d);
+	RotateArraySolution4(array_to_rotate, n, d);
 	PrintArray(array_to_rotate, n);
 }
 
