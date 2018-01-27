@@ -1,5 +1,7 @@
 // Rotate array by d elememts.
 // https://www.geeksforgeeks.org/array-rotation/
+// https://www.geeksforgeeks.org/program-for-array-rotation-continued-reversal-algorithm/
+
 #include<iostream>
 #include<stdio.h>
 using namespace std;
