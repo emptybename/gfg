@@ -21,7 +21,7 @@ int getCount(string s){
 	}
 	int sum = ((s[0] - '0')*10 + (s[1] - '0'))*10 + (s[2] - '0');
 	if(sum%8 == 0)count++;
-	for(int i = 1;i < len;i++){
+	f(1,len){
 		sum = sum*10 + s[(i+2)%len] - '0';
 		sum = sum % 1000;
 		if(sum % 8 == 0)count++;
