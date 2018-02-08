@@ -23,7 +23,6 @@ int queryToGetSum( int *toRotate, int l, int r, int ar[], int arSize){
 		sum += ar[arSize-1]-ar[l-1] + ar[r];
 	}
 	else{
-
 		sum += ar[r];
 		if(l > 0)
 			sum -= ar[l-1];
