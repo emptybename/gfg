@@ -1,5 +1,7 @@
 // https://www.geeksforgeeks.org/find-element-given-index-number-rotations/
-
+/* just use pen paper and try to think you will see that its like stack. 
+   Reverse all the rotation from last to first and you will get the original array
+*/
 #include<iostream>
 #define f(l,n) for(int i = 0;i < n;i++)
 #define fr(l,n) for(int i = n-1; i >= l;i--)
